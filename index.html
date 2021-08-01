@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/piano.ico" rel="shortcut icon">
+
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300;400;800&display=swap"
+    rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+  <title>virtual-piano</title>
+</head>
+<body id="body">
+    <div class="wrapper" id="wrapper">
+        <button class="fullscreen"></button>
+      <div class="btns">
+        <button id="letters" class="active">LETTERS</button>
+        <button id="notes">NOTES</button>
+      </div>
+      <div class="piano" id="piano">
+        <div data-note="c" class="key white" data-key="65"><span class="hints"  data-note="c" data-key="65">A</span>
+        <span class="hinkey none"  data-note="c" data-key="65">c</span></div>
+
+        <div data-note="c♯" class="key black" data-key="87"><span class="hints"  data-note="c♯" data-key="87">W</span>
+        <span class="hinkey none"  data-note="c♯" data-key="87">c♯</span></div>
+
+        <div data-note="d" class="key white" data-key="83"><span class="hints"  data-note="d" data-key="83">S</span>
+        <span class="hinkey none"  data-note="d" data-key="83">d</span></div>
+
+        <div data-note="d♯" class="key black" data-key="69"><span class="hints"  data-note="d♯" data-key="69">E</span>
+        <span class="hinkey none"  data-note="d♯" data-key="69">d♯</span></div>
+
+        <div data-note="e" class="key white" data-key="68"><span class="hints"  data-note="e" data-key="68">D</span>
+        <span class="hinkey none"  data-note="e" data-key="68">e</span></div>
+
+        <div data-note="f" class="key white" data-key="70"><span class="hints"  data-note="f" data-key="70">F</span>
+        <span class="hinkey none"  data-note="f" data-key="70">f</span></div>
+
+        <div data-note="f♯" class="key black" data-key="84"><span class="hints"  data-note="f♯" data-key="84">T</span>
+        <span class="hinkey none"  data-note="f♯" data-key="84">f♯</span></div>
+
+        <div data-note="g" class="key white" data-key="71"><span class="hints"  data-note="g" data-key="71">G</span>
+        <span class="hinkey none"  data-note="g" data-key="71">g</span></div>
+
+        <div data-note="g♯" class="key black" data-key="89"><span class="hints"  data-note="g♯" data-key="89">Y</span>
+        <span class="hinkey none"  data-note="g♯" data-key="89">g♯</span></div>
+
+        <div data-note="a" class="key white" data-key="72"><span class="hints"  data-note="a" data-key="72">H</span>
+        <span class="hinkey none"  data-note="a" data-key="72">a</span></div>
+        <div data-note="a♯" class="key black" data-key="85"><span class="hints"  data-note="a♯" data-key="85">U</span>
+        <span class="hinkey none"  data-note="a♯" data-key="85">a♯</span></div>
+
+
+        <div data-note="b" class="key white" data-key="74"><span class="hints"  data-note="b" data-key="74">J</span>
+        <span class="hinkey none" >b</span></div>
+      </div>
+      <footer class="footer">
+    <div class="footer-container">
+      <a class="github" href="https://github.com/dizollate" target="_blank" rel="noopener noreferrer">github</a>
+      <a class="rss" href="https://rs.school/js/" target="_blank" rel="noopener noreferrer">
+        <span class="rss-year">'21</span>
+      </a>
+    </div>
+  </footer>
+    </div>
+
+  <audio src="assets/audio/a.mp3" id="a" data-key="72"></audio>
+  <audio src="assets/audio/c.mp3" id="c" data-key="65"></audio>
+  <audio src="assets/audio/a♯.mp3" id="a♯" data-key="85"></audio>
+  <audio src="assets/audio/g♯.mp3" id="g♯" data-key="89"></audio>
+  <audio src="assets/audio/f♯.mp3" id="f♯" data-key="84"></audio>
+  <audio src="assets/audio/d♯.mp3" id="d♯" data-key="69"></audio>
+  <audio src="assets/audio/c♯.mp3" id="c♯" data-key="87"></audio>
+  <audio src="assets/audio/b.mp3" id="b" data-key="74"></audio>
+  <audio src="assets/audio/g.mp3" id="g" data-key="71"></audio>
+  <audio src="assets/audio/f.mp3" id="f" data-key="70"></audio>
+  <audio src="assets/audio/e.mp3" id="e" data-key="68"></audio>
+  <audio src="assets/audio/d.mp3" id="d" data-key="83"></audio>
+  <script src="scripts.js"></script>
+</body>

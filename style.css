@@ -1,0 +1,197 @@
+
+  
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #143F6B;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.piano {
+  display: flex;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+  cursor: pointer;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.white {
+	position: relative;
+  --width: 100px;
+  background-color: white;
+  border: 1px solid #333;
+  transition: transform 0.1s ease;
+}
+
+.white.active {
+  background-color: #CCC;
+  transform: scale(0.99);
+}
+
+.key * {
+     pointer-events: none;
+}
+
+.btns {
+	display: flex;
+	justify-content: center;
+}
+
+#letters, #notes {
+	padding: 5px 10px;
+	margin-left: 10px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.black {
+	position: relative;
+  --width: 60px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+  transition: transform 0.1s ease;
+}
+
+.block {
+	display: block;
+}
+
+#letters.active {
+	background-color: gray;
+}
+
+#notes.active {
+	background-color: gray;
+}
+
+.none {
+	display: none;
+}
+
+
+.black.active {
+  background-color: #333;
+  transform: scale(0.99);
+}
+
+.black span {
+	color: white;
+	position: absolute;
+	bottom: 10px;
+	right: 40%;
+}
+
+.white span {
+	position: absolute;
+	bottom: 10px;
+	right: 40%;
+}
+
+.black.active span {
+	color: #143F6B;
+	position: absolute;
+	bottom: 10px;
+	right: 40%;
+}
+
+.white.active span {
+	color: #143F6B;
+	position: absolute;
+	bottom: 10px;
+	right: 40%;
+}
+
+.fullscreen {
+	position: fixed;
+	top: 100px;
+	right: 150px;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: 0;
+	outline: 0;
+	background-size: contain;
+	transition: 0.3s;
+	cursor: pointer;
+	background-image: url("assets/svg/fullscreen-open.svg");
+}
+
+.fullscreen:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+:-webkit-full-screen .fullscreen {
+  background-image: url("assets/svg/fullscreen-exit.svg");
+}
+
+.footer {
+	border-image-slice: 1;
+	border-image-source: linear-gradient(to left, #38495a, #a2abb3, #38495a);
+}
+.footer-container {
+	padding: 0 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+.github {
+	display: block;
+	width: 120px;
+	height: 45px;
+	padding-left: 45px;
+	background-image: url("assets/svg/github.svg");
+	background-size: 35px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	line-height: 45px;
+	color: #cbd5de;
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+	transition: 0.3s;
+}
+.github:hover {
+	color: #fff;
+}
+.rss {
+	display: block;
+	position: relative;
+	font-family: "Open Sans", sans-serif;
+	width: 86px;
+	height: 32px;
+	background-image: url("assets/svg/rss.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-right: 111px;
+}
+.rss-year {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 21px;
+	letter-spacing: -2px;
+	color: #cbd5de;
+	line-height: 0.9;
+	font-weight: bold;
+	transition: 0.3s;
+}
+.rss:hover .rss-year {
+	right: -5px;
+	letter-spacing: 0;
+}
